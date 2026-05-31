@@ -5,15 +5,27 @@ entities:
   - entity: cover
     class: curtain
     dps:
+      # Канал целевой позиции с инверсией
       - id: 2
         type: integer
         name: position
         range:
           min: 0
           max: 100
+        mapping:
+          - invert: true
+          
+      # Канал текущего положения с инверсией
       - id: 3
         type: integer
         name: current_position
+        range: # Диапазон здесь тоже обязателен, чтобы плагин знал, как считать инверсию (100 - x)
+          min: 0
+          max: 100
+        mapping:
+          - invert: true
+          
+      # Статус работы мотора
       - id: 7
         type: string
         name: work_state
