@@ -1,0 +1,26 @@
+name: Ty-Wifi Curtain
+products:
+  - id: eumhijnbthoekpgg
+entities:
+  - entity: cover
+    class: curtain
+    dps:
+      - id: 2
+        type: integer
+        name: position
+        range:
+          min: 0
+          max: 100
+      - id: 3
+        type: integer
+        name: current_position
+      - id: 7
+        type: string
+        name: work_state
+        mapping:
+          - dps_val: opening
+            value: opening
+          - dps_val: closing
+            value: closing
+          - dps_val: stopped
+            value: stopped
